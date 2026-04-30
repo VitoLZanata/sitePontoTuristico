@@ -1,0 +1,46 @@
+.cabecalho {
+    height: 150px;
+    display: flex;
+    flex-direction: column; 
+    
+    align-items: center;
+    justify-content: center;
+    color: rgb(133, 43, 43);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+.cabecalho .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-item{
+    height: 5000px;
+}
+
+.MatrizNossaSenhoraMedianeira {
+    /* 1. O link da imagem (podes trocar por um link real da foto) */
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+     url('https://lh3.googleusercontent.com/gpms-cs-s/ABJJf52R2MIRh8wtc8DPosFzEEwlbRFEohBA6DOOd1Pm5DAw59zPUKbLosRxzbbkwLTUZEMb5s3Hz_fvydRWDOFNWFPahz-xIdGfinHptRaWtXSYfKMI8DVZN88Pl9_uwLqq2KiZ1OaM=s680-w680-h510-rw');
+    
+    /* 2. Faz a imagem cobrir todo o espaço sem distorcer */
+    background-size: cover;
+    
+    /* 3. Centraliza a foto */
+    background-position: center;
+
+    background-size: cover;
+    background-position: center;
+    background-position: right;
+
+    
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
