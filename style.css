@@ -1,46 +1,62 @@
-.cabecalho {
-    height: 150px;
-    display: flex;
-    flex-direction: column; 
-    
-    align-items: center;
-    justify-content: center;
-    color: rgb(133, 43, 43);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    text-align: center;
+/* Variáveis de tema */
+:root {
+    --azul-medianeira: #0056b3;
+    --fundo-leve: #f4f7f6;
+    --sombra-suave: 0 10px 20px rgba(0, 0, 0, 0.08);
 }
 
-.cabecalho .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--fundo-leve);
+    color: #333;
 }
 
-.carousel-item{
-    height: 5000px;
+/* Header personalizado */
+.cabecalho-principal {
+    background: linear-gradient(to right, #ffffff, #e9ecef);
+    padding: 80px 0;
 }
 
-.MatrizNossaSenhoraMedianeira {
-    /* 1. O link da imagem (podes trocar por um link real da foto) */
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-     url('https://lh3.googleusercontent.com/gpms-cs-s/ABJJf52R2MIRh8wtc8DPosFzEEwlbRFEohBA6DOOd1Pm5DAw59zPUKbLosRxzbbkwLTUZEMb5s3Hz_fvydRWDOFNWFPahz-xIdGfinHptRaWtXSYfKMI8DVZN88Pl9_uwLqq2KiZ1OaM=s680-w680-h510-rw');
-    
-    /* 2. Faz a imagem cobrir todo o espaço sem distorcer */
-    background-size: cover;
-    
-    /* 3. Centraliza a foto */
-    background-position: center;
+/* Banner de Destaques (Carousel) */
+#banner-destaques {
+    border-radius: 0px; 
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
 
-    background-size: cover;
-    background-position: center;
-    background-position: right;
+.slide-item {
+    height: 400px;
+}
 
-    
+/* Efeito de vidro no texto do slide */
+.texto-vidro {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+    padding: 20px 40px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-align: center;
+/* Estilo dos Cards de atrativos */
+.card-personalizado {
+    border: none;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card-personalizado:hover {
+    transform: scale(1.05); /* Efeito de leve aumento ao passar o mouse */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+}
+
+/* Painel de informações final */
+.painel-informativo {
+    border-radius: 12px;
+    overflow: hidden;
+    border: none;
+    box-shadow: var(--sombra-suave);
+}
+
+.painel-informativo .list-group-item {
+    border-bottom: 1px solid #eee;
+    padding: 15px;
 }
