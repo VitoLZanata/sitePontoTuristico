@@ -1,62 +1,110 @@
-/* Variáveis de tema */
-:root {
-    --azul-medianeira: #0056b3;
-    --fundo-leve: #f4f7f6;
-    --sombra-suave: 0 10px 20px rgba(0, 0, 0, 0.08);
-}
+
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--fundo-leve);
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--fundo-site);
     color: #333;
 }
 
-/* Header personalizado */
+/* Estilo do Cabeçalho */
 .cabecalho-principal {
-    background: linear-gradient(to right, #ffffff, #e9ecef);
-    padding: 80px 0;
+    background: linear-gradient(135deg, #ffffff 0%, #e9ecef 100%);
 }
 
-/* Banner de Destaques (Carousel) */
-#banner-destaques {
-    border-radius: 0px; 
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+/* CONFIGURAÇÃO DO CARROSSEL */
+.slide-item {
+    height: 550px; /* Altura ideal para desktop */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Efeito de Vidro (Frosted Glass) no texto */
+.texto-vidro {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 25px 50px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* IMAGENS DE FUNDO LOCAIS */
+/* Certifica-te de que os nomes dos ficheiros na pasta 'imagens' batem com os nomes abaixo */
+
+.bg-morro-salete {
+
+    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)), 
+                      url('imagens/morro.jpg'); 
+    background-size: cover; 
+
+    background-position: center 30%; 
+    
+    background-repeat: no-repeat;
 }
 
 .slide-item {
-    height: 400px;
+    height: 600px;
 }
 
-/* Efeito de vidro no texto do slide */
-.texto-vidro {
-    background: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(8px);
-    padding: 20px 40px;
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+.bg-lago {
+    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)), 
+                      url('imagens/lago.jpg');
+
+    background-position: center 70%; 
+
 }
 
-/* Estilo dos Cards de atrativos */
+.bg-restaurante{
+        background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)), 
+                      url('imagens/restaurante.jpg');
+
+        background-position: center 15%; 
+}
+
+.bg-matriz {
+    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)), 
+                      url('imagens/matriz.jpg');
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza o conteúdo verticalmente */
+    min-height: 250px;       /* Garante que todos os corpos de card tenham o mesmo tamanho */
+}
+
+/* Responsividade do Carrossel */
+@media (max-width: 768px) {
+    .slide-item {
+        height: 350px; /* Mais baixo em telemóveis */
+    }
+    .texto-vidro {
+        font-size: 1.2rem;
+        padding: 15px 25px;
+    }
+}
+
+/* Efeito Hover nos Cards */
 .card-personalizado {
-    border: none;
-    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .card-personalizado:hover {
-    transform: scale(1.05); /* Efeito de leve aumento ao passar o mouse */
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12) !important;
 }
 
-/* Painel de informações final */
+/* Painel Informativo */
 .painel-informativo {
-    border-radius: 12px;
+    border-radius: 15px;
     overflow: hidden;
-    border: none;
-    box-shadow: var(--sombra-suave);
-}
-
-.painel-informativo .list-group-item {
-    border-bottom: 1px solid #eee;
-    padding: 15px;
 }
